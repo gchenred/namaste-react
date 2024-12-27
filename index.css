@@ -1,68 +1,78 @@
 .header {
-    height: 90px;
-    /* background-color: rgb(245, 95, 103); */
-    background-color: rgb(187, 96, 106);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    border-radius: 1rem;
-    align-items: center;
-    
+  height: 90px;
+  /* background-color: rgb(245, 95, 103); */
+  background-color: rgb(187, 96, 106);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-radius: 1rem;
+  align-items: center;
 }
 .logo-container {
-    width: 300px;
-    height: 90px;
-    margin-left: 2rem;
-    margin-top: 0.3rem;
+  width: 300px;
+  height: 90px;
+  margin-left: 2rem;
+  margin-top: 0.3rem;
 }
 .logo {
-    width: 100px;
-    height: 85px;
+  width: 100px;
+  height: 85px;
 }
 .nav-items-container {
-    margin-right: 1rem;
+  margin-right: 1rem;
 }
 .nav-items-list {
-    margin-left: auto;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-right: 1rem;
-
+  margin-left: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-right: 1rem;
 }
 .nav-item {
-    margin: 1rem;
-    list-style: none;
-    font-size: 1rem;
+  margin: 1rem;
+  list-style: none;
+  font-size: 1rem;
 }
 .body-container {
-    margin: 2rem;
+  margin: 2rem;
 }
 .restuarant-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .res-card {
-    justify-content: space-around;
-    margin: 1rem;
-    width: 180px;
-    height: 300px;
-    border-radius: 1rem;
-    background-color:rgb(253, 224, 224)
+  justify-content: space-around;
+  margin: 1rem;
+  width: 180px;
+  height: 300px;
+  border-radius: 1rem;
+  background-color: rgb(253, 224, 224);
 }
-.image{
-    margin: 0.5rem;
-    width: 160px;
-    height:120px;
-    border-radius: 0.5rem;
+.image {
+  margin: 0.5rem;
+  width: 160px;
+  height: 120px;
+  border-radius: 0.5rem;
 }
 .card-content {
-    margin-left: 0.5rem;
-    margin: 0.5rem;
-    font-size: 0.8rem;
+  margin-left: 0.5rem;
+  margin: 0.5rem;
+  font-size: 0.8rem;
 }
 .card-title {
-    margin-top: 0;
-    font-size: 1rem;
+  margin-top: 0;
+  font-size: 1rem;
+}
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  justify-content: space-around;
+  margin: 1rem;
+  width: 180px;
+  height: 300px;
+  border-radius: 1rem;
+  background-color: rgb(253, 224, 224);
 }
