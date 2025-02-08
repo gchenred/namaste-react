@@ -1,5 +1,6 @@
 import Logo from "../../Images/Landing/Logo.jpg";
 import { useState } from "react";
+import { Link } from "react-router";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
@@ -10,10 +11,26 @@ const Header = () => {
       </div>
       <div className="nav-items-container">
         <ul className="nav-items-list">
-          <li className="nav-item">Home</li>
-          <li className="nav-item">About Us</li>
-          <li className="nav-item">Cart</li>
-          <li className="nav-item">Contact Us</li>
+          <li className="nav-item">
+            <Link className="nav-item-link" to="/">
+              Home
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-item-link" to="/about">
+              About Us
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-item-link" to="/cart">
+              Cart
+            </Link>
+          </li>
+          <li className="nav-item">
+            <Link className="nav-item-link" to="/contact">
+              Contact Us
+            </Link>
+          </li>
           <button
             className="nav-item-btn"
             onClick={() => {
