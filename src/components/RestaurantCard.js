@@ -2,7 +2,7 @@ import { RESCARD_URL } from "../utilities/constants";
 
 const RestaurantCard = (props) => {
   const { resData } = props;
-  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla, id } =
+  const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     resData.info;
   return (
     <div className="res-card">
