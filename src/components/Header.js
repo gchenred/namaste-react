@@ -1,9 +1,11 @@
 import Logo from "../../Images/Landing/Logo.jpg";
 import { useState } from "react";
 import { Link } from "react-router";
+import useOnlineStatus from "../utilities/useOnlineStatus";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
+  const onlineStatus = useOnlineStatus(true);
   return (
     <div className="header">
       <div className="logo-container">
@@ -11,6 +13,9 @@ const Header = () => {
       </div>
       <div className="nav-items-container">
         <ul className="nav-items-list">
+          <li className="nav-item">
+            Online Status : {onlineStatus ? "🟢" : "🔴"}
+          </li>
           <li className="nav-item">
             <Link className="nav-item-link" to="/">
               Home
