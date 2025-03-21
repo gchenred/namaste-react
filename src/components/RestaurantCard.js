@@ -5,17 +5,17 @@ const RestaurantCard = (props) => {
   const { cloudinaryImageId, name, cuisines, avgRating, costForTwo, sla } =
     resData.info;
   return (
-    <div className="res-card">
+    <div className="justify-around m-4 p-3 w-56 h-88 rounded-lg  bg-red-200 cursor-pointer hover:border-2 border-red-300">
       <img
-        className="image"
+        className="rounded-lg h-36 w-56"
         alt="Restaurant Logo"
         src={RESCARD_URL + cloudinaryImageId}
       ></img>
-      <h3 className="card-content card-title">{name}</h3>
-      <h4 className="card-content">{avgRating}</h4>
-      <h4 className="card-content">{costForTwo}</h4>
-      <h4 className="card-content">{sla.slaString}</h4>
-      <h4 className="card-content">{cuisines.join(", ")}</h4>
+      <h3 className="m-2 text-lg font-medium">{name}</h3>
+      <h4 className="m-2 text-sm">{avgRating}</h4>
+      <h4 className="m-2 text-sm">{costForTwo}</h4>
+      <h4 className="m-2 text-sm">{sla.slaString}</h4>
+      <h4 className="m-2 text-sm">{cuisines.join(", ")}</h4>
     </div>
   );
 };
