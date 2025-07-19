@@ -1,6 +1,14 @@
 import { RESCARD_URL } from "../utilities/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "./cartSlice";
 
-const ItemList = ({ items }) => {
+const ItemList = ({ items, inCart, handleRemoveItems }) => {
+  const dispatch = useDispatch();
+  const handleAddItem = (item) => {
+    console.log("Clicked", item);
+    dispatch(addItem(item));
+  };
+
   return (
     <div>
       {items?.map((item) => (
@@ -23,9 +31,21 @@ const ItemList = ({ items }) => {
           </div>
           <div className="relative w-3/12 p-4">
             <img src={RESCARD_URL + item?.card?.info?.imageId}></img>
-            <button className="font-bold cursor-pointer absolute bottom-6 left-14 bg-red-200 px-4 rounded-md">
-              ADD
-            </button>
+            {inCart ? (
+              <button
+                className="font-bold cursor-pointer absolute bottom-6 left-14 bg-red-200 px-4 rounded-md"
+                onClick={() => handleRemoveItems}
+              >
+                Remove
+              </button>
+            ) : (
+              <button
+                className="font-bold cursor-pointer absolute bottom-6 left-14 bg-red-200 px-4 rounded-md"
+                onClick={() => handleAddItem(item)}
+              >
+                Add
+              </button>
+            )}
           </div>
         </div>
       ))}

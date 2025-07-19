@@ -1,11 +1,15 @@
 import Logo from "../../Images/Landing/Logo.png";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router";
 import useOnlineStatus from "../utilities/useOnlineStatus";
+import UserContext from "../utilities/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
   const [btnName, setBtnName] = useState("Login");
   const onlineStatus = useOnlineStatus(true);
+  const { loggedInUser } = useContext(UserContext);
+  const cartItems = useSelector((store) => store.cart.items);
   return (
     <div className="flex h-32 bg-red-300 shadow-md rounded-lg justify-between items-center">
       <div className="w-44 h-auto flex m-4 items-center justify-center">
@@ -29,7 +33,7 @@ const Header = () => {
           </li>
           <li className="m-2 p-2 text-lg hover:font-medium">
             <Link className="nav-item-link" to="/cart">
-              Cart
+              {cartItems.length > 0 ? "Cart - " + cartItems.length : "Cart"}
             </Link>
           </li>
           <li className="m-2 p-2 text-lg hover:font-medium">
@@ -50,6 +54,7 @@ const Header = () => {
           >
             {btnName}
           </button>
+          <li className="m-2 p-2 text-lg font-bold">{loggedInUser}</li>
         </ul>
       </div>
     </div>
